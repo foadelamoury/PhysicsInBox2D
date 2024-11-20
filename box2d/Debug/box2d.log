@@ -1,6 +1,35 @@
 ﻿  prog.cpp
+C:\Game Development\C++\box2dProj\box2d\PhysicsInBox2D\box2d\prog.cpp(142,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xmemory(700,103): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+  (compiling source file 'prog.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xmemory(700,103):
+      the template instantiation context (the oldest one first) is
+          C:\Game Development\C++\box2dProj\box2d\PhysicsInBox2D\box2d\prog.cpp(143,19):
+          see reference to function template instantiation 'void std::vector<Pipe,std::allocator<Pipe>>::emplace_back<const int&,float&>(const int &,float &)' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(858,24):
+          see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_one_at_back<const int&,float&>(const int &,float &)' being compiled
+          with
+          [
+              _Ty=Pipe
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(776,20):
+          see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_back_with_unused_capacity<const int&,float&>(const int &,float &)' being compiled
+          with
+          [
+              _Ty=Pipe
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(794,27):
+          see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,const int&,float&>(_Alloc &,_Objty *const ,const int &,float &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<Pipe>,
+              _Ty=Pipe,
+              _Objty=Pipe
+          ]
+  
 sfml-graphics-s-d.lib(BlendMode.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(BlendMode.obj)' or at ''; linking object as if no debug info
 sfml-graphics-s-d.lib(Color.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Color.obj)' or at ''; linking object as if no debug info
+sfml-graphics-s-d.lib(Font.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Font.obj)' or at ''; linking object as if no debug info
 sfml-graphics-s-d.lib(Glsl.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Glsl.obj)' or at ''; linking object as if no debug info
 sfml-graphics-s-d.lib(GLCheck.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(GLCheck.obj)' or at ''; linking object as if no debug info
 sfml-graphics-s-d.lib(GLExtensions.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(GLExtensions.obj)' or at ''; linking object as if no debug info
@@ -17,7 +46,9 @@ sfml-graphics-s-d.lib(Transformable.obj) : warning LNK4099: PDB '' was not found
 sfml-graphics-s-d.lib(View.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(View.obj)' or at ''; linking object as if no debug info
 sfml-graphics-s-d.lib(Vertex.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Vertex.obj)' or at ''; linking object as if no debug info
 sfml-graphics-s-d.lib(Shape.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Shape.obj)' or at ''; linking object as if no debug info
+sfml-graphics-s-d.lib(CircleShape.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(CircleShape.obj)' or at ''; linking object as if no debug info
 sfml-graphics-s-d.lib(RectangleShape.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(RectangleShape.obj)' or at ''; linking object as if no debug info
+sfml-graphics-s-d.lib(Text.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Text.obj)' or at ''; linking object as if no debug info
 sfml-graphics-s-d.lib(VertexArray.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(VertexArray.obj)' or at ''; linking object as if no debug info
 sfml-graphics-s-d.lib(VertexBuffer.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(VertexBuffer.obj)' or at ''; linking object as if no debug info
 sfml-graphics-s-d.lib(RenderTextureImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(RenderTextureImpl.obj)' or at ''; linking object as if no debug info
@@ -54,6 +85,7 @@ sfml-system-s-d.lib(SleepImpl.obj) : warning LNK4099: PDB '' was not found with 
 sfml-system-s-d.lib(ThreadLocalImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(ThreadLocalImpl.obj)' or at ''; linking object as if no debug info
 box2d.lib(b2_broad_phase.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_broad_phase.obj)' or at ''; linking object as if no debug info
 box2d.lib(b2_chain_shape.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_chain_shape.obj)' or at ''; linking object as if no debug info
+box2d.lib(b2_circle_shape.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_circle_shape.obj)' or at ''; linking object as if no debug info
 box2d.lib(b2_collide_circle.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_collide_circle.obj)' or at ''; linking object as if no debug info
 box2d.lib(b2_collide_edge.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_collide_edge.obj)' or at ''; linking object as if no debug info
 box2d.lib(b2_collide_polygon.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_collide_polygon.obj)' or at ''; linking object as if no debug info
@@ -61,7 +93,6 @@ box2d.lib(b2_collision.obj) : warning LNK4099: PDB '' was not found with 'box2d.
 box2d.lib(b2_distance.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_distance.obj)' or at ''; linking object as if no debug info
 box2d.lib(b2_dynamic_tree.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_dynamic_tree.obj)' or at ''; linking object as if no debug info
 box2d.lib(b2_edge_shape.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_edge_shape.obj)' or at ''; linking object as if no debug info
-box2d.lib(b2_polygon_shape.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_polygon_shape.obj)' or at ''; linking object as if no debug info
 box2d.lib(b2_time_of_impact.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_time_of_impact.obj)' or at ''; linking object as if no debug info
 box2d.lib(b2_block_allocator.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_block_allocator.obj)' or at ''; linking object as if no debug info
 box2d.lib(b2_draw.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_draw.obj)' or at ''; linking object as if no debug info
@@ -95,4 +126,4 @@ box2d.lib(b2_weld_joint.obj) : warning LNK4099: PDB '' was not found with 'box2d
 box2d.lib(b2_wheel_joint.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_wheel_joint.obj)' or at ''; linking object as if no debug info
 box2d.lib(b2_world.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_world.obj)' or at ''; linking object as if no debug info
 box2d.lib(b2_world_callbacks.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_world_callbacks.obj)' or at ''; linking object as if no debug info
-  box2d.vcxproj -> C:\Game Development\C++\box2dProj\box2d\Debug\box2d.exe
+  box2d.vcxproj -> C:\Game Development\C++\box2dProj\box2d\PhysicsInBox2D\Debug\box2d.exe

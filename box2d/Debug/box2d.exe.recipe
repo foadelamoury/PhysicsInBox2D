@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Game Development\C++\box2dProj\box2d\Debug\box2d.exe</FullPath>
+      <FullPath>C:\Game Development\C++\box2dProj\box2d\PhysicsInBox2D\Debug\box2d.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

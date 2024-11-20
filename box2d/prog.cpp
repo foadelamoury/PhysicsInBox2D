@@ -1,70 +1,183 @@
 #include <SFML/Graphics.hpp>
 #include <box2d/box2d.h>
+#include <vector>
+#include <sstream>
+
+// Constants
+const int WINDOW_WIDTH = 800;
+const int WINDOW_HEIGHT = 600;
+const float PIPE_SPEED = -200.0f;
+const float GRAVITY = 9.8f;
+const float JUMP_FORCE = 5.0f;
+
+// Utility function to convert Box2D positions to SFML
+sf::Vector2f box2dToSFML(const b2Vec2& position) {
+    return { position.x * 30.f, WINDOW_HEIGHT - position.y * 30.f };
+}
+
+// Game Object Classes
+class Bird {
+public:
+    sf::CircleShape shape;
+    b2Body* body;
+
+    Bird(b2World& world) {
+        // SFML Shape
+        shape.setRadius(15);
+        shape.setFillColor(sf::Color::Yellow);
+        shape.setOrigin(15, 15);
+        shape.setPosition(WINDOW_WIDTH / 4, WINDOW_HEIGHT / 2);
+
+        // Box2D Body
+        b2BodyDef bodyDef;
+        bodyDef.type = b2_dynamicBody;
+        bodyDef.position.Set((WINDOW_WIDTH / 4) / 30.f, (WINDOW_HEIGHT / 2) / 30.f);
+        body = world.CreateBody(&bodyDef);
+
+        // Box2D Shape
+        b2CircleShape circle;
+        circle.m_radius = shape.getRadius() / 30.f;
+
+        // Box2D Fixture
+        b2FixtureDef fixtureDef;
+        fixtureDef.shape = &circle;
+        fixtureDef.density = 1.0f;
+        fixtureDef.friction = 0.0f;
+        fixtureDef.restitution = 0.0f;
+        body->CreateFixture(&fixtureDef);
+    }
+
+    void update() {
+        b2Vec2 position = body->GetPosition();
+        shape.setPosition(box2dToSFML(position));
+    }
+
+    void jump() {
+        b2Vec2 velocity = body->GetLinearVelocity();
+        body->SetLinearVelocity(b2Vec2(velocity.x, JUMP_FORCE));
+    }
+};
+
+class Pipe {
+public:
+    sf::RectangleShape topPipe;
+    sf::RectangleShape bottomPipe;
+
+    Pipe(float x, float gapY) {
+        topPipe.setSize({ 50, gapY });
+        topPipe.setFillColor(sf::Color::Green);
+        topPipe.setPosition(x, 0);
+
+        bottomPipe.setSize({ 50, WINDOW_HEIGHT - gapY - 150 });
+        bottomPipe.setFillColor(sf::Color::Green);
+        bottomPipe.setPosition(x, gapY + 150);
+    }
+
+    void move(float deltaTime) {
+        float dx = PIPE_SPEED * deltaTime;
+        topPipe.move(dx, 0);
+        bottomPipe.move(dx, 0);
+    }
+
+    bool isOffScreen() const {
+        return topPipe.getPosition().x + topPipe.getSize().x < 0;
+    }
+
+    void draw(sf::RenderWindow& window) {
+        window.draw(topPipe);
+        window.draw(bottomPipe);
+    }
+};
 
 int main() {
     // SFML Setup
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Box2D + SFML Test");
+    sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Flappy Bird");
     window.setFramerateLimit(60);
 
-    // Box2D World Setup
-    b2Vec2 gravity(0.0f, -9.8f); // Gravity vector
+    // Box2D Setup
+    b2Vec2 gravity(0.0f, -GRAVITY);
     b2World world(gravity);
 
-    // Ground Body (Static)
-    b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0.0f, -10.0f); // Position at the bottom
-    b2Body* groundBody = world.CreateBody(&groundBodyDef);
+    // Create Bird
+    Bird bird(world);
 
-    b2PolygonShape groundBox;
-    groundBox.SetAsBox(50.0f, 10.0f); // Size of the ground
-    groundBody->CreateFixture(&groundBox, 0.0f); // Density = 0.0 for static objects
+    // Pipes
+    std::vector<Pipe> pipes;
+    float pipeSpawnTimer = 0.0f;
 
-    // Dynamic Body (Falling Box)
-    b2BodyDef dynamicBodyDef;
-    dynamicBodyDef.type = b2_dynamicBody;
-    dynamicBodyDef.position.Set(0.0f, 15.0f); // Starting position
-    b2Body* dynamicBody = world.CreateBody(&dynamicBodyDef);
+    // Scoring
+    int score = 0;
+    sf::Font font;
+    font.loadFromFile("C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/Fonts/PixelifySans.ttf");
+    sf::Text scoreText;
+    scoreText.setFont(font);
+    scoreText.setCharacterSize(24);
+    scoreText.setFillColor(sf::Color::White);
+    scoreText.setPosition(WINDOW_WIDTH / 2 - 20, 10);
 
-    b2PolygonShape dynamicBox;
-    dynamicBox.SetAsBox(1.0f, 1.0f); // Size of the box
-
-    b2FixtureDef fixtureDef;
-    fixtureDef.shape = &dynamicBox;
-    fixtureDef.density = 1.0f; // Mass density
-    fixtureDef.friction = 0.3f; // Friction
-    dynamicBody->CreateFixture(&fixtureDef);
-
-    // SFML Shapes for Rendering
-    sf::RectangleShape groundRect(sf::Vector2f(800.0f, 20.0f)); // Ground is a wide rectangle
-    groundRect.setFillColor(sf::Color::Red);
-    groundRect.setPosition(0.0f, 580.0f); // Bottom of the screen
-
-    sf::RectangleShape boxRect(sf::Vector2f(40.0f, 40.0f)); // Box is a square
-    boxRect.setFillColor(sf::Color::Green);
-    boxRect.setOrigin(20.0f, 20.0f); // Center origin for proper positioning
-
-    // Main Loop
+    // Game Loop
+    sf::Clock clock;
     while (window.isOpen()) {
+        float deltaTime = clock.restart().asSeconds();
+
+        // Event Handling
         sf::Event event;
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space) {
+                bird.jump();
+            }
         }
 
-        // Box2D Simulation Step
-        float timeStep = 1.0f / 60.0f; // 60 FPS
-        int32 velocityIterations = 6;
-        int32 positionIterations = 2;
-        world.Step(timeStep, velocityIterations, positionIterations);
+        // Update Physics
+        world.Step(deltaTime, 8, 3);
 
-        // Update Box Position
-        b2Vec2 position = dynamicBody->GetPosition();
-        boxRect.setPosition(position.x * 40.0f + 400.0f, 600.0f - position.y * 40.0f); // Scale and translate to screen
+        // Update Bird
+        bird.update();
 
-        // Rendering
+        // Spawn Pipes
+        pipeSpawnTimer += deltaTime;
+        if (pipeSpawnTimer >= 2.0f) {
+            float gapY = rand() % (WINDOW_HEIGHT - 200) + 50;
+            pipes.emplace_back(WINDOW_WIDTH, gapY);
+            pipeSpawnTimer = 0.0f;
+        }
+
+        // Update Pipes
+        for (auto& pipe : pipes)
+            pipe.move(deltaTime);
+
+        // Remove Off-Screen Pipes
+        pipes.erase(std::remove_if(pipes.begin(), pipes.end(), [](const Pipe& pipe) { return pipe.isOffScreen(); }),
+            pipes.end());
+
+        // Collision Detection (simple AABB checks)
+        for (const auto& pipe : pipes) {
+            if (bird.shape.getGlobalBounds().intersects(pipe.topPipe.getGlobalBounds()) ||
+                bird.shape.getGlobalBounds().intersects(pipe.bottomPipe.getGlobalBounds())) {
+                window.close(); // Game Over
+            }
+        }
+
+        // Scoring
+        for (auto& pipe : pipes) {
+            if (pipe.topPipe.getPosition().x + 50 < bird.shape.getPosition().x && !pipe.isOffScreen()) {
+                score++;
+            }
+        }
+
+        // Update Score Text
+        std::ostringstream ss;
+        ss << "Score: " << score;
+        scoreText.setString(ss.str());
+
+        // Render
         window.clear();
-        window.draw(groundRect);
-        window.draw(boxRect);
+        window.draw(bird.shape);
+        for (auto& pipe : pipes)
+            pipe.draw(window);
+        window.draw(scoreText);
         window.display();
     }
 

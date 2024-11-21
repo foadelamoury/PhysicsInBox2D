@@ -95,4 +95,4 @@ box2d.lib(b2_weld_joint.obj) : warning LNK4099: PDB '' was not found with 'box2d
 box2d.lib(b2_wheel_joint.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_wheel_joint.obj)' or at ''; linking object as if no debug info
 box2d.lib(b2_world.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_world.obj)' or at ''; linking object as if no debug info
 box2d.lib(b2_world_callbacks.obj) : warning LNK4099: PDB '' was not found with 'box2d.lib(b2_world_callbacks.obj)' or at ''; linking object as if no debug info
-  box2d.vcxproj -> C:\Game Development\C++\box2dProj\box2d\Debug\box2d.exe
+  box2d.vcxproj -> C:\Game Development\C++\box2dProj\box2d\PhysicsInBox2D\Debug\box2d.exe

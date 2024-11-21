@@ -13,6 +13,7 @@ int main() {
     // Ground Body (Static)
     b2BodyDef groundBodyDef;
     groundBodyDef.position.Set(0.0f, -10.0f); // Position at the bottom
+    groundBodyDef.type = b2_staticBody;
     b2Body* groundBody = world.CreateBody(&groundBodyDef);
 
     b2PolygonShape groundBox;
@@ -23,6 +24,7 @@ int main() {
     b2BodyDef dynamicBodyDef;
     dynamicBodyDef.type = b2_dynamicBody;
     dynamicBodyDef.position.Set(0.0f, 15.0f); // Starting position
+    
     b2Body* dynamicBody = world.CreateBody(&dynamicBodyDef);
 
     b2PolygonShape dynamicBox;
@@ -32,6 +34,7 @@ int main() {
     fixtureDef.shape = &dynamicBox;
     fixtureDef.density = 1.0f; // Mass density
     fixtureDef.friction = 0.3f; // Friction
+    fixtureDef.restitution = 0.8f; // Restitution
     dynamicBody->CreateFixture(&fixtureDef);
 
     // SFML Shapes for Rendering
@@ -49,9 +52,17 @@ int main() {
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Right)
+            {
+				dynamicBody->ApplyLinearImpulse(b2Vec2(1.0f, 0.0f), dynamicBody->GetWorldCenter(), true);
+            }
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Left)
+            {
+                dynamicBody->ApplyLinearImpulse(b2Vec2(-1.0f, 0.0f), dynamicBody->GetWorldCenter(), true);
+            }
         }
 
-        // Box2D Simulation Step
+        // Box2D Simulation Steps
         float timeStep = 1.0f / 60.0f; // 60 FPS
         int32 velocityIterations = 6;
         int32 positionIterations = 2;

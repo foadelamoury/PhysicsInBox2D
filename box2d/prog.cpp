@@ -4,12 +4,51 @@
 #include <vector>
 #include <iostream>
 
+
 // Constants
 const int WINDOW_WIDTH = 1082;
 const int WINDOW_HEIGHT = 920;
-const float STAR_MASS = 100000.0f;   // Mass of the star
+const float STAR_MASS = 10000000.0f;   // Mass of the star
 const float G = 1e-3;                // Scaled gravitational constant
 const float PIXELS_PER_METER = 30.f; // Scaling factor for Box2D to SFML
+
+enum CollisionGroups {
+	GROUP_STAR = 0x00000001,
+	GROUP_PLANET = 0x00000002
+};
+
+
+float randomFloat(float min, float max) {
+    return min + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (max - min)));
+}
+
+
+void checkCollisions(b2World& world) {
+    
+
+    for (b2Contact* contact = world.GetContactList(); contact; contact = contact->GetNext()) {
+        if (contact->IsTouching()) {
+            b2Fixture* fixtureA = contact->GetFixtureA();
+            b2Fixture* fixtureB = contact->GetFixtureB();
+
+            uint16 categoryA = fixtureA->GetFilterData().categoryBits;
+            uint16 categoryB = fixtureB->GetFilterData().categoryBits;
+
+            // Check for collision between star and planet
+            if ((categoryA == GROUP_STAR && categoryB == GROUP_PLANET) ||
+                (categoryA == GROUP_PLANET && categoryB == GROUP_STAR))
+            {
+                
+                if (categoryA == GROUP_PLANET)
+                    fixtureA->GetBody()->SetAwake(false);
+                else
+                    fixtureB->GetBody()->SetAwake(false);
+            }
+        }
+    }
+
+  
+}
 
 // Utility function to calculate gravitational force
 b2Vec2 calculateGravitationalForce(const b2Vec2& planetPos, const b2Vec2& starPos, float planetMass) {
@@ -21,26 +60,39 @@ b2Vec2 calculateGravitationalForce(const b2Vec2& planetPos, const b2Vec2& starPo
     return forceMagnitude * direction;
 }
 
-bool isColliding(const sf::CircleShape& planetShape, const sf::CircleShape& starShape) {
-    float distance = std::hypot(
-        planetShape.getPosition().x - starShape.getPosition().x,
-        planetShape.getPosition().y - starShape.getPosition().y
-    );
-    return distance < (planetShape.getRadius() + starShape.getRadius());
-}
+
 
 // Star Class
 class Star {
 public:
     sf::CircleShape shape;
+    b2Body* body2;
     b2Vec2 position;
-
-    Star(float x, float y, float radius) : position(x, y) {
+  
+    Star(b2World& world, float x, float y, float radius) : position(x, y) {
+        // SFML Shape
         shape.setRadius(radius);
         shape.setOrigin(radius, radius);
         shape.setPosition(x, y);
         shape.setFillColor(sf::Color::Yellow);
+
+        // Box2D Body
+        b2BodyDef bodyDef2;
+        bodyDef2.type = b2_kinematicBody;
+        bodyDef2.position.Set(x / PIXELS_PER_METER, (WINDOW_HEIGHT - y) / PIXELS_PER_METER);
+        body2 = world.CreateBody(&bodyDef2);
+
+        // Box2D Fixture
+        b2CircleShape circleShape;
+        circleShape.m_radius = radius / PIXELS_PER_METER;
+
+        b2FixtureDef fixtureDef2;
+        fixtureDef2.shape = &circleShape;
+        fixtureDef2.filter.categoryBits = GROUP_STAR;
+        //fixtureDef2.filter.maskBits = GROUP_PLANET;
+        body2->CreateFixture(&fixtureDef2);
     }
+
 };
 
 // Planet Class
@@ -49,14 +101,12 @@ public:
     sf::CircleShape shape;
     b2Body* body;
     sf::VertexArray trail;
-
     Planet(b2World& world, float x, float y, const b2Vec2& velocity, float radius, sf::Color color) {
         // SFML Shape
         shape.setRadius(radius);
         shape.setOrigin(radius, radius);
         shape.setPosition(x, y);
         shape.setFillColor(color);
-
         // Box2D Body
         b2BodyDef bodyDef;
         bodyDef.type = b2_dynamicBody;
@@ -73,6 +123,8 @@ public:
         fixtureDef.shape = &circleShape;
         fixtureDef.density = 1.0f;
         fixtureDef.friction = 0.0f;
+        fixtureDef.filter.categoryBits = GROUP_PLANET;
+		fixtureDef.filter.maskBits = GROUP_STAR;
         body->CreateFixture(&fixtureDef);
 
         // Trail
@@ -105,7 +157,7 @@ int main() {
     b2World world(gravity);
 
     // Create Star
-    Star star(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2, 30);
+    Star star(world,WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2, 50);
 
     // List of planets
     std::vector<Planet> planets;
@@ -140,7 +192,7 @@ int main() {
                 b2Vec2 tangentialVelocity(-direction.y * orbitalSpeed, direction.x * orbitalSpeed);
 
                 // Create the planet with the tangential velocity
-                planets.emplace_back(world, mouseX, mouseY, tangentialVelocity, 8.0f, sf::Color::Cyan);
+                planets.emplace_back(world, mouseX, mouseY, tangentialVelocity, randomFloat(10.0f, 40.0f), sf::Color(rand() % 256, rand() % 256, rand() % 256));
             }
         }
 
@@ -157,11 +209,13 @@ int main() {
         for (Planet& planet : planets)
             planet.update();
 
-        // Check for Collisions and Remove Planets
+        checkCollisions(world);
         planets.erase(std::remove_if(planets.begin(), planets.end(),
             [&](Planet& planet) {
-            if (isColliding(planet.shape, star.shape)) {
-                world.DestroyBody(planet.body); // Remove from Box2D world
+            if (!(planet.body->IsAwake()))
+            {
+                world.DestroyBody(planet.body);
+
                 return true; // Mark for removal
             }
             return false;

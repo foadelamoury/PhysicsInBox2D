@@ -6,18 +6,15 @@ float randomFloat(float min, float max) {
 }
 
 void checkCollisions(b2World& world) {
-    // Iterate through all active collisions in the physics world
+    
     for (b2Contact* contact = world.GetContactList(); contact; contact = contact->GetNext()) {
-        // Check if the two objects in contact are physically touching
         if (contact->IsTouching()) {
-            b2Fixture* fixtureA = contact->GetFixtureA(); // Get the first object
-            b2Fixture* fixtureB = contact->GetFixtureB(); // Get the second object
+            b2Fixture* fixtureA = contact->GetFixtureA(); 
+            b2Fixture* fixtureB = contact->GetFixtureB(); 
 
-            // Retrieve the category bits of the two objects
             uint16 categoryA = fixtureA->GetFilterData().categoryBits;
             uint16 categoryB = fixtureB->GetFilterData().categoryBits;
 
-            // Check if the collision involves a star and a planet
             if (
                 
                 (categoryA == GROUP_STAR && categoryB == GROUP_PLANET) 
@@ -26,7 +23,6 @@ void checkCollisions(b2World& world) {
 
                 (categoryA == GROUP_PLANET && categoryB == GROUP_STAR)
                 ) {
-                // If the planet is fixtureA, make it inactive; otherwise, make fixtureB inactive
                 if (categoryA == GROUP_PLANET)
 
                     fixtureA->GetBody()->SetAwake(false);
@@ -39,32 +35,26 @@ void checkCollisions(b2World& world) {
 
 
 b2Vec2 calculateGravitationalForce(const b2Vec2& planetPos, const b2Vec2& BiggerMassPos, float planetMass, float otherMass) {
-    // Calculate the direction vector from the planet to the larger mass
     b2Vec2 direction = BiggerMassPos - planetPos;
-    float distance = direction.Length(); // Calculate the distance between the two bodies
+    float distance = direction.Length();
 
-    if (distance < 1.0f) distance = 1.0f; // Prevent extremely small distances causing large forces
+    if (distance < 1.0f) distance = 1.0f;
 
-    // Compute the magnitude of the gravitational force
     float forceMagnitude = G * ((otherMass * planetMass) / (distance * distance));
 
-    direction.Normalize(); // Convert the direction to a unit vector
-    return forceMagnitude * direction; // Return the force vector
+    direction.Normalize(); 
+    return forceMagnitude * direction; 
 }
 
 
 void initializeGame(sf::RenderWindow& window, b2World& world, Star& star, std::vector<Planet>& planets) {
-    // SFML Window
     window.create(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Simple Solar System Simulation");
     window.setFramerateLimit(60);
 
-    // Box2D World
     world.SetGravity(b2Vec2(0.0f, 0.0f));
 
-    // Create Star
     star = Star(world, WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2, 100);
 
-    // Initialize Planets List
     planets.clear();
 }
 

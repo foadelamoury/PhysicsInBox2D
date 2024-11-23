@@ -10,9 +10,9 @@
 
 static const int WINDOW_WIDTH = 1850;
 static const int WINDOW_HEIGHT = 800;
-static const float STAR_MASS = 1000000.f;   // Mass of the star
-static const float G = 1e-3;                // Scaled gravitational constant
-static const float PIXELS_PER_METER = 30.f; // Scaling factor for Box2D to SFML
+static const float STAR_MASS = 1000000.f;   
+static const float G = 1e-3;                
+static const float PIXELS_PER_METER = 30.f;
 
 
 enum CollisionGroups {

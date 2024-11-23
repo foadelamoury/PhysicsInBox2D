@@ -1,0 +1,49 @@
+#include "Planet.h"
+
+Planet::Planet(b2World& world, float x, float y, const b2Vec2& velocity, float radius, sf::Color color)
+{
+    // SFML Shape
+    shape.setRadius(radius);
+    shape.setOrigin(radius, radius);
+    shape.setPosition(x, y);
+    shape.setFillColor(color);
+    // Box2D Body
+    b2BodyDef bodyDef;
+    bodyDef.type = b2_dynamicBody;
+    bodyDef.position.Set(x / PIXELS_PER_METER, (WINDOW_HEIGHT - y) / PIXELS_PER_METER);
+    bodyDef.linearVelocity = velocity;
+    body = world.CreateBody(&bodyDef);
+
+    // Box2D Shape
+    b2CircleShape circleShape;
+    circleShape.m_radius = radius / PIXELS_PER_METER;
+
+    // Box2D Fixture
+    b2FixtureDef fixtureDef;
+    fixtureDef.shape = &circleShape;
+    fixtureDef.density = 1.0f;
+    fixtureDef.friction = 0.0f;
+    fixtureDef.filter.categoryBits = GROUP_PLANET;
+    fixtureDef.filter.maskBits = GROUP_STAR;
+    body->CreateFixture(&fixtureDef);
+
+    // Trail
+    trail = sf::VertexArray(sf::LineStrip);
+}
+
+void Planet::update()
+{
+    // Update SFML position from Box2D body
+    b2Vec2 position = body->GetPosition();
+    shape.setPosition(position.x * PIXELS_PER_METER, WINDOW_HEIGHT - position.y * PIXELS_PER_METER);
+
+    // Add trail point
+    trail.append(sf::Vertex(shape.getPosition(), shape.getFillColor()));
+}
+
+void Planet::draw(sf::RenderWindow& window)
+{
+    if (trail.getVertexCount() > 1)
+        window.draw(trail);
+    window.draw(shape);
+}

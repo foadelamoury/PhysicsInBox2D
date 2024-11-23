@@ -5,6 +5,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{57B812FA-EAA4-4FC1-8A8B-10B5FB1D3EA7}|box2d\\box2d.vcxproj|C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\prog.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{57B812FA-EAA4-4FC1-8A8B-10B5FB1D3EA7}|box2d\\box2d.vcxproj|solutionrelative:box2d\\prog.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57B812FA-EAA4-4FC1-8A8B-10B5FB1D3EA7}|box2d\\box2d.vcxproj|C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\Planet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57B812FA-EAA4-4FC1-8A8B-10B5FB1D3EA7}|box2d\\box2d.vcxproj|solutionrelative:box2d\\Planet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57B812FA-EAA4-4FC1-8A8B-10B5FB1D3EA7}|box2d\\box2d.vcxproj|C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\Star.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57B812FA-EAA4-4FC1-8A8B-10B5FB1D3EA7}|box2d\\box2d.vcxproj|solutionrelative:box2d\\Star.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57B812FA-EAA4-4FC1-8A8B-10B5FB1D3EA7}|box2d\\box2d.vcxproj|C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\Planet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57B812FA-EAA4-4FC1-8A8B-10B5FB1D3EA7}|box2d\\box2d.vcxproj|solutionrelative:box2d\\Planet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57B812FA-EAA4-4FC1-8A8B-10B5FB1D3EA7}|box2d\\box2d.vcxproj|C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\Constants.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57B812FA-EAA4-4FC1-8A8B-10B5FB1D3EA7}|box2d\\box2d.vcxproj|solutionrelative:box2d\\Constants.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57B812FA-EAA4-4FC1-8A8B-10B5FB1D3EA7}|box2d\\box2d.vcxproj|C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\Star.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57B812FA-EAA4-4FC1-8A8B-10B5FB1D3EA7}|box2d\\box2d.vcxproj|solutionrelative:box2d\\Star.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,16 +98,76 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Star.h",
+              "DocumentMoniker": "C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\Star.h",
+              "RelativeDocumentMoniker": "box2d\\Star.h",
+              "ToolTip": "C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\Star.h",
+              "RelativeToolTip": "box2d\\Star.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-22T07:10:37.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Constants.h",
+              "DocumentMoniker": "C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\Constants.h",
+              "RelativeDocumentMoniker": "box2d\\Constants.h",
+              "ToolTip": "C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\Constants.h",
+              "RelativeToolTip": "box2d\\Constants.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-22T07:09:16.109Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "prog.cpp",
               "DocumentMoniker": "C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\prog.cpp",
               "RelativeDocumentMoniker": "box2d\\prog.cpp",
               "ToolTip": "C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\prog.cpp",
               "RelativeToolTip": "box2d\\prog.cpp",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAwCUAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAxwC8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-16T08:09:21.173Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Star.cpp",
+              "DocumentMoniker": "C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\Star.cpp",
+              "RelativeDocumentMoniker": "box2d\\Star.cpp",
+              "ToolTip": "C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\Star.cpp",
+              "RelativeToolTip": "box2d\\Star.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-22T07:11:19.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Planet.cpp",
+              "DocumentMoniker": "C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\Planet.cpp",
+              "RelativeDocumentMoniker": "box2d\\Planet.cpp",
+              "ToolTip": "C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\Planet.cpp",
+              "RelativeToolTip": "box2d\\Planet.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-22T07:06:37.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Planet.h",
+              "DocumentMoniker": "C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\Planet.h",
+              "RelativeDocumentMoniker": "box2d\\Planet.h",
+              "ToolTip": "C:\\Game Development\\C\u002B\u002B\\box2dProj\\box2d\\PhysicsInBox2D\\box2d\\Planet.h",
+              "RelativeToolTip": "box2d\\Planet.h",
+              "ViewState": "AgIAAAQAAAAAAAAAAADwvw8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-22T07:06:11.876Z"
             }
           ]
         },

@@ -1,0 +1,150 @@
+^C:\GAME DEVELOPMENT\C++\BOX2DPROJ\BOX2D\PHYSICSINBOX2D\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\285471CF30181C8AB46442C13C7E580A\SFML-POPULATE-MKDIR.RULE
+setlocal
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -Dcfgdir=/Debug -P "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-mkdirs.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -E touch "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-mkdir"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\GAME DEVELOPMENT\C++\BOX2DPROJ\BOX2D\PHYSICSINBOX2D\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\285471CF30181C8AB46442C13C7E580A\SFML-POPULATE-DOWNLOAD.RULE
+setlocal
+cd "C:\Game Development\C++\box2dProj\box2d\PhysicsInBox2D\build\_deps"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -E touch "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-download"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\GAME DEVELOPMENT\C++\BOX2DPROJ\BOX2D\PHYSICSINBOX2D\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\285471CF30181C8AB46442C13C7E580A\SFML-POPULATE-UPDATE.RULE
+setlocal
+cd "C:\Game Development\C++\box2dProj\box2d\PhysicsInBox2D\build\_deps\sfml-src"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitupdate.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\GAME DEVELOPMENT\C++\BOX2DPROJ\BOX2D\PHYSICSINBOX2D\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\285471CF30181C8AB46442C13C7E580A\SFML-POPULATE-PATCH.RULE
+setlocal
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -E touch "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-patch"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\GAME DEVELOPMENT\C++\BOX2DPROJ\BOX2D\PHYSICSINBOX2D\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\285471CF30181C8AB46442C13C7E580A\SFML-POPULATE-CONFIGURE.RULE
+setlocal
+cd "C:\Game Development\C++\box2dProj\box2d\PhysicsInBox2D\build\_deps\sfml-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -E touch "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-configure"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\GAME DEVELOPMENT\C++\BOX2DPROJ\BOX2D\PHYSICSINBOX2D\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\285471CF30181C8AB46442C13C7E580A\SFML-POPULATE-BUILD.RULE
+setlocal
+cd "C:\Game Development\C++\box2dProj\box2d\PhysicsInBox2D\build\_deps\sfml-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -E touch "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-build"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\GAME DEVELOPMENT\C++\BOX2DPROJ\BOX2D\PHYSICSINBOX2D\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\285471CF30181C8AB46442C13C7E580A\SFML-POPULATE-INSTALL.RULE
+setlocal
+cd "C:\Game Development\C++\box2dProj\box2d\PhysicsInBox2D\build\_deps\sfml-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -E touch "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-install"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\GAME DEVELOPMENT\C++\BOX2DPROJ\BOX2D\PHYSICSINBOX2D\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\285471CF30181C8AB46442C13C7E580A\SFML-POPULATE-TEST.RULE
+setlocal
+cd "C:\Game Development\C++\box2dProj\box2d\PhysicsInBox2D\build\_deps\sfml-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -E touch "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-test"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\GAME DEVELOPMENT\C++\BOX2DPROJ\BOX2D\PHYSICSINBOX2D\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\097B01D130F3A07B2F311D03C615B119\SFML-POPULATE-COMPLETE.RULE
+setlocal
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -E make_directory "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/CMakeFiles/Debug"
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -E touch "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/CMakeFiles/Debug/sfml-populate-complete"
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe -E touch "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-done"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\GAME DEVELOPMENT\C++\BOX2DPROJ\BOX2D\PHYSICSINBOX2D\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\0D87FFE09755028136AA93713A76E193\SFML-POPULATE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\GAME DEVELOPMENT\C++\BOX2DPROJ\BOX2D\PHYSICSINBOX2D\BUILD\_DEPS\SFML-SUBBUILD\CMAKELISTS.TXT
+setlocal
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe "-SC:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild" "-BC:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild" --check-stamp-file "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

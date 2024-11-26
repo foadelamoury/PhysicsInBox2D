@@ -144,8 +144,7 @@ void render(sf::RenderWindow& window, Star& star, std::vector<Planet>& planets) 
     for (Planet& planet : planets)
     {
         planet.draw(window);
-        std::cout<<"Initial Planet Mass: "<<planet.body->GetMass()<<std::endl;
-        std::cout << "Initial Planet Radius: " << planet.shape.getRadius() << std::endl;
+      
 
     }
     window.display();

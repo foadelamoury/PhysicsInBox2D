@@ -1,0 +1,522 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.22631 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
+      Build started 11/26/2024 3:29:21 PM.
+      
+      Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\3.31.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\3.31.0\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\3.31.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.73
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/3.31.0/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-remtlc"
+      binary: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-remtlc"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-remtlc'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2833c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
+        Build started 11/26/2024 3:29:23 PM.
+        
+        Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-remtlc\\cmTC_2833c.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_2833c.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-remtlc\\Debug\\".
+          Creating directory "cmTC_2833c.dir\\Debug\\cmTC_2833c.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_2833c.dir\\Debug\\cmTC_2833c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_2833c.dir\\Debug\\cmTC_2833c.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2833c.dir\\Debug\\\\" /Fd"cmTC_2833c.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Fouad\\scoop\\apps\\cmake\\3.31.0\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34123 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2833c.dir\\Debug\\\\" /Fd"cmTC_2833c.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Fouad\\scoop\\apps\\cmake\\3.31.0\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-remtlc\\Debug\\cmTC_2833c.exe" /INCREMENTAL /ILK:"cmTC_2833c.dir\\Debug\\cmTC_2833c.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-remtlc/Debug/cmTC_2833c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-remtlc/Debug/cmTC_2833c.lib" /MACHINE:X64  /machine:x64 cmTC_2833c.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_2833c.vcxproj -> C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-remtlc\\Debug\\cmTC_2833c.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_2833c.dir\\Debug\\cmTC_2833c.tlog\\unsuccessfulbuild".
+          Touching "cmTC_2833c.dir\\Debug\\cmTC_2833c.tlog\\cmTC_2833c.lastbuildstate".
+        Done Building Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-remtlc\\cmTC_2833c.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.51
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.41.34123.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "build/_deps/sfml-src/CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
+      Build started 11/26/2024 3:30:00 PM.
+      
+      Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\3.31.0\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\3.31.0\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\3.31.0\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.64
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/3.31.0/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "build/_deps/sfml-src/CMakeLists.txt:31 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-tkxfe3"
+      binary: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-tkxfe3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-tkxfe3'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_aaeff.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
+        Build started 11/26/2024 3:30:01 PM.
+        
+        Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tkxfe3\\cmTC_aaeff.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_aaeff.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tkxfe3\\Debug\\".
+          Creating directory "cmTC_aaeff.dir\\Debug\\cmTC_aaeff.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_aaeff.dir\\Debug\\cmTC_aaeff.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_aaeff.dir\\Debug\\cmTC_aaeff.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_aaeff.dir\\Debug\\\\" /Fd"cmTC_aaeff.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\Fouad\\scoop\\apps\\cmake\\3.31.0\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34123 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_aaeff.dir\\Debug\\\\" /Fd"cmTC_aaeff.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\Fouad\\scoop\\apps\\cmake\\3.31.0\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tkxfe3\\Debug\\cmTC_aaeff.exe" /INCREMENTAL /ILK:"cmTC_aaeff.dir\\Debug\\cmTC_aaeff.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-tkxfe3/Debug/cmTC_aaeff.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-tkxfe3/Debug/cmTC_aaeff.lib" /MACHINE:X64  /machine:x64 cmTC_aaeff.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_aaeff.vcxproj -> C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tkxfe3\\Debug\\cmTC_aaeff.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_aaeff.dir\\Debug\\cmTC_aaeff.tlog\\unsuccessfulbuild".
+          Touching "cmTC_aaeff.dir\\Debug\\cmTC_aaeff.tlog\\cmTC_aaeff.lastbuildstate".
+        Done Building Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tkxfe3\\cmTC_aaeff.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.53
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "build/_deps/sfml-src/CMakeLists.txt:31 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "build/_deps/sfml-src/CMakeLists.txt:31 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.41.34123.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CheckTypeSize.cmake:262 (check_include_file)"
+      - "build/_deps/sfml-src/cmake/Config.cmake:10 (check_type_size)"
+      - "build/_deps/sfml-src/CMakeLists.txt:34 (include)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-vnm79m"
+      binary: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-vnm79m"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-vnm79m'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_15e5a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
+        Build started 11/26/2024 3:30:02 PM.
+        
+        Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vnm79m\\cmTC_15e5a.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_15e5a.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vnm79m\\Debug\\".
+          Creating directory "cmTC_15e5a.dir\\Debug\\cmTC_15e5a.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_15e5a.dir\\Debug\\cmTC_15e5a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_15e5a.dir\\Debug\\cmTC_15e5a.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_15e5a.dir\\Debug\\\\" /Fd"cmTC_15e5a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vnm79m\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34123 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_15e5a.dir\\Debug\\\\" /Fd"cmTC_15e5a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vnm79m\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vnm79m\\Debug\\cmTC_15e5a.exe" /INCREMENTAL /ILK:"cmTC_15e5a.dir\\Debug\\cmTC_15e5a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-vnm79m/Debug/cmTC_15e5a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-vnm79m/Debug/cmTC_15e5a.lib" /MACHINE:X64  /machine:x64 cmTC_15e5a.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_15e5a.vcxproj -> C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vnm79m\\Debug\\cmTC_15e5a.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_15e5a.dir\\Debug\\cmTC_15e5a.tlog\\unsuccessfulbuild".
+          Touching "cmTC_15e5a.dir\\Debug\\cmTC_15e5a.tlog\\cmTC_15e5a.lastbuildstate".
+        Done Building Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vnm79m\\cmTC_15e5a.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.54
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CheckTypeSize.cmake:263 (check_include_file)"
+      - "build/_deps/sfml-src/cmake/Config.cmake:10 (check_type_size)"
+      - "build/_deps/sfml-src/CMakeLists.txt:34 (include)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-rzhu2u"
+      binary: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-rzhu2u"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-rzhu2u'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_544b6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
+        Build started 11/26/2024 3:30:03 PM.
+        
+        Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rzhu2u\\cmTC_544b6.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_544b6.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rzhu2u\\Debug\\".
+          Creating directory "cmTC_544b6.dir\\Debug\\cmTC_544b6.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_544b6.dir\\Debug\\cmTC_544b6.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_544b6.dir\\Debug\\cmTC_544b6.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_544b6.dir\\Debug\\\\" /Fd"cmTC_544b6.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rzhu2u\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34123 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_544b6.dir\\Debug\\\\" /Fd"cmTC_544b6.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rzhu2u\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rzhu2u\\Debug\\cmTC_544b6.exe" /INCREMENTAL /ILK:"cmTC_544b6.dir\\Debug\\cmTC_544b6.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-rzhu2u/Debug/cmTC_544b6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-rzhu2u/Debug/cmTC_544b6.lib" /MACHINE:X64  /machine:x64 cmTC_544b6.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_544b6.vcxproj -> C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rzhu2u\\Debug\\cmTC_544b6.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_544b6.dir\\Debug\\cmTC_544b6.tlog\\unsuccessfulbuild".
+          Touching "cmTC_544b6.dir\\Debug\\cmTC_544b6.tlog\\cmTC_544b6.lastbuildstate".
+        Done Building Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rzhu2u\\cmTC_544b6.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.52
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CheckTypeSize.cmake:264 (check_include_file)"
+      - "build/_deps/sfml-src/cmake/Config.cmake:10 (check_type_size)"
+      - "build/_deps/sfml-src/CMakeLists.txt:34 (include)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-k9ly6q"
+      binary: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-k9ly6q"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-k9ly6q'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f9810.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
+        Build started 11/26/2024 3:30:04 PM.
+        
+        Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k9ly6q\\cmTC_f9810.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_f9810.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k9ly6q\\Debug\\".
+          Creating directory "cmTC_f9810.dir\\Debug\\cmTC_f9810.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_f9810.dir\\Debug\\cmTC_f9810.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_f9810.dir\\Debug\\cmTC_f9810.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f9810.dir\\Debug\\\\" /Fd"cmTC_f9810.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k9ly6q\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34123 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f9810.dir\\Debug\\\\" /Fd"cmTC_f9810.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k9ly6q\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k9ly6q\\Debug\\cmTC_f9810.exe" /INCREMENTAL /ILK:"cmTC_f9810.dir\\Debug\\cmTC_f9810.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-k9ly6q/Debug/cmTC_f9810.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-k9ly6q/Debug/cmTC_f9810.lib" /MACHINE:X64  /machine:x64 cmTC_f9810.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_f9810.vcxproj -> C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k9ly6q\\Debug\\cmTC_f9810.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_f9810.dir\\Debug\\cmTC_f9810.tlog\\unsuccessfulbuild".
+          Touching "cmTC_f9810.dir\\Debug\\cmTC_f9810.tlog\\cmTC_f9810.lastbuildstate".
+        Done Building Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k9ly6q\\cmTC_f9810.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.59
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "C:/Users/Fouad/scoop/apps/cmake/3.31.0/share/cmake-3.31/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "build/_deps/sfml-src/cmake/Config.cmake:10 (check_type_size)"
+      - "build/_deps/sfml-src/CMakeLists.txt:34 (include)"
+    checks:
+      - "Check size of void*"
+    directories:
+      source: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-6bpl7l"
+      binary: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-6bpl7l"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "HAVE_SIZEOF_VOID_PTR"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-6bpl7l'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6d3ec.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
+        Build started 11/26/2024 3:30:05 PM.
+        
+        Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6bpl7l\\cmTC_6d3ec.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_6d3ec.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6bpl7l\\Debug\\".
+          Creating directory "cmTC_6d3ec.dir\\Debug\\cmTC_6d3ec.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_6d3ec.dir\\Debug\\cmTC_6d3ec.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_6d3ec.dir\\Debug\\cmTC_6d3ec.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6d3ec.dir\\Debug\\\\" /Fd"cmTC_6d3ec.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6bpl7l\\SIZEOF_VOID_PTR.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34123 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6d3ec.dir\\Debug\\\\" /Fd"cmTC_6d3ec.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6bpl7l\\SIZEOF_VOID_PTR.c"
+          SIZEOF_VOID_PTR.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6bpl7l\\Debug\\cmTC_6d3ec.exe" /INCREMENTAL /ILK:"cmTC_6d3ec.dir\\Debug\\cmTC_6d3ec.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-6bpl7l/Debug/cmTC_6d3ec.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/CMakeFiles/CMakeScratch/TryCompile-6bpl7l/Debug/cmTC_6d3ec.lib" /MACHINE:X64  /machine:x64 cmTC_6d3ec.dir\\Debug\\SIZEOF_VOID_PTR.obj
+          cmTC_6d3ec.vcxproj -> C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6bpl7l\\Debug\\cmTC_6d3ec.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_6d3ec.dir\\Debug\\cmTC_6d3ec.tlog\\unsuccessfulbuild".
+          Touching "cmTC_6d3ec.dir\\Debug\\cmTC_6d3ec.tlog\\cmTC_6d3ec.lastbuildstate".
+        Done Building Project "C:\\Game Development\\C++\\box2dProj\\box2d\\PhysicsInBox2D\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6bpl7l\\cmTC_6d3ec.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.54
+        
+      exitCode: 0
+...

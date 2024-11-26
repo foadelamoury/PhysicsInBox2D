@@ -1,0 +1,14 @@
+# Target labels
+ sfml-populate
+# Source files and their labels
+C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/CMakeFiles/sfml-populate
+C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/CMakeFiles/0d87ffe09755028136aa93713a76e193/sfml-populate.rule
+C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/CMakeFiles/097b01d130f3a07b2f311d03c615b119/sfml-populate-complete.rule
+C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/CMakeFiles/285471cf30181c8ab46442c13c7e580a/sfml-populate-build.rule
+C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/CMakeFiles/285471cf30181c8ab46442c13c7e580a/sfml-populate-configure.rule
+C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/CMakeFiles/285471cf30181c8ab46442c13c7e580a/sfml-populate-download.rule
+C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/CMakeFiles/285471cf30181c8ab46442c13c7e580a/sfml-populate-install.rule
+C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/CMakeFiles/285471cf30181c8ab46442c13c7e580a/sfml-populate-mkdir.rule
+C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/CMakeFiles/285471cf30181c8ab46442c13c7e580a/sfml-populate-patch.rule
+C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/CMakeFiles/285471cf30181c8ab46442c13c7e580a/sfml-populate-test.rule
+C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/CMakeFiles/285471cf30181c8ab46442c13c7e580a/sfml-populate-update.rule

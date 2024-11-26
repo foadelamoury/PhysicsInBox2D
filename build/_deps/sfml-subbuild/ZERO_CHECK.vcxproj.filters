@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Game Development\C++\box2dProj\box2d\PhysicsInBox2D\build\_deps\sfml-subbuild\CMakeFiles\0d87ffe09755028136aa93713a76e193\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5A183485-88E5-3146-A3B6-B19F20B50526}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

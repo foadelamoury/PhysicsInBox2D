@@ -1,0 +1,15 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=git
+command=C:/Users/Fouad/scoop/apps/cmake/3.31.0/bin/cmake.exe;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake
+source_dir=C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-src
+work_dir=C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps
+repository=https://github.com/SFML/SFML.git
+remote=origin
+init_submodules=TRUE
+recurse_submodules=--recursive
+submodules=
+CMP0097=NEW
+      

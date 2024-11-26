@@ -1,0 +1,10 @@
+^C:\GAME DEVELOPMENT\C++\BOX2DPROJ\BOX2D\PHYSICSINBOX2D\BUILD\_DEPS\SFML-SUBBUILD\CMAKEFILES\0D87FFE09755028136AA93713A76E193\GENERATE.STAMP.RULE
+setlocal
+C:\Users\Fouad\scoop\apps\cmake\3.31.0\bin\cmake.exe "-SC:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild" "-BC:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Game Development/C++/box2dProj/box2d/PhysicsInBox2D/build/_deps/sfml-subbuild/sfml-populate.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
